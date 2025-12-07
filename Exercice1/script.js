@@ -5,7 +5,7 @@ let books = [
 ];
 
 function addBook(title,author,price,stockk){
-    max=0;
+    let max=0;
     books.map(item=>max<item.id?max=item.id:null);
     max+=1;
     let livre = { id: max, titre: title, auteur: author, prix: price, stock: stockk };
@@ -19,7 +19,7 @@ function getBooksByAuthor(author){
 }
 
 function valeurStock(){
-    valeur=0;
+    let valeur=0;
     books.map(item=>valeur+=item.prix*item.stock);
     return valeur;
 }
